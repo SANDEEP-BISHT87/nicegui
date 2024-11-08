@@ -3,9 +3,7 @@ from nicegui import ui
 # Main website styling with a gradient background
 with ui.row().style('background: linear-gradient(to bottom, #B7E7FE, #ffffff); padding: 2px 2px;'):
 
-    from nicegui import ui
-
-    from nicegui import ui
+    
 
     # Company Icon and Title
     with ui.column().style('align-items: center; margin: 32px; text-align: center;'):
