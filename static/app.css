@@ -1,0 +1,48 @@
+/* Main container for cards */
+.card-container {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Carousel container with 3D perspective and animation */
+  .card-carousel {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 20s linear infinite; /* Rotates around Y-axis */
+    z-index: 2;
+  }
+  
+  /* Animation for continuous rotation */
+  @keyframes autoRun {
+    from {
+      transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    }
+    to {
+      transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    }
+  }
+  
+  /* Styling individual cards with rotation positioning */
+  .card {
+    position: absolute;
+    inset: 0;
+    transform: rotateY(calc((var(--position) - 1) * (360deg / var(--quantity)))) translateZ(500px);
+  }
+  
+  /* Image inside the card */
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  

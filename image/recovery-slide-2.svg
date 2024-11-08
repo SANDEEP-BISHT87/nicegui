@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 450">
+  <defs>
+    <linearGradient id="bg-gradient-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0891b2"/>
+      <stop offset="100%" style="stop-color:#0284c7"/>
+    </linearGradient>
+    <filter id="glow-2">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1180" height="450" fill="url(#bg-gradient-2)"/>
+  
+  <!-- Decorative Elements -->
+  <circle cx="150" cy="175" r="100" fill="#22d3ee" opacity="0.1"/>
+  <circle cx="650" cy="275" r="150" fill="#38bdf8" opacity="0.1"/>
+  
+  <!-- Virtual Disk Layers -->
+  <g transform="translate(250,145)" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.3))">
+    <rect width="300" height="40" rx="10" fill="#0ea5e9" opacity="0.9"/>
+    <rect y="30" width="300" height="40" rx="10" fill="#38bdf8" opacity="0.8"/>
+    <rect y="60" width="300" height="40" rx="10" fill="#7dd3fc" opacity="0.7"/>
+  </g>
+  
+  <!-- Glowing Connection Lines -->
+  <g filter="url(#glow-2)" opacity="0.6">
+    <path d="M200 225 Q400 175 600 225" stroke="#22d3ee" stroke-width="2" fill="none"/>
+    <path d="M200 245 Q400 295 600 245" stroke="#22d3ee" stroke-width="2" fill="none"/>
+  </g>
+  
+  <!-- Modern Typography -->
+  <text x="400" y="75" text-anchor="middle" fill="#ffffff" font-size="28" font-family="SF Pro Display, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif" font-weight="700">Virtual Disk Recovery</text>
+  <text x="400" y="375" text-anchor="middle" fill="#e0f2fe" font-size="16" font-family="SF Pro Text, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif" font-weight="700">Seamless Virtual Environment Restoration</text>
+</svg>
