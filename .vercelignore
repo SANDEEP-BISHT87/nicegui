@@ -1,0 +1,15 @@
+# Ignore development files
+.git/
+.env
+.vscode/
+node_modules/
+tests/
+
+# Ignore local configuration files
+.gitignore
+.vercelignore
+.DS_Store
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
