@@ -164,6 +164,6 @@ with ui.row().style('background: #2b2b2b; padding: 50px 24px; color: white; just
     ui.separator().style('margin: 20px 0; background: #444; height: 1px; width: 100%;')
     ui.label('© 2024 Professional Data Recovery. All Rights Reserved.').classes('text-sm text-gray-500 font-light')
 
-
-ui.run()
+if __name__==__main__:
+    ui.run()
 
