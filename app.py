@@ -12,7 +12,7 @@ with ui.row().style('background: linear-gradient(to bottom, #B7E7FE, #ffffff); p
         # Row to contain the image and title
         with ui.row().style('align-items: center; justify-content: center;'):
             # Adding the company logo (image) next to the title
-            ui.image('./image/ntools.png').style('width: 80px; height: 80px; margin-right: 16px;')  # Company logo image
+            ui.image('./public/image/ntools.png').style('width: 80px; height: 80px; margin-right: 16px;')  # Company logo image
             
             # Title and subtitle labels
             ui.label('NIBBLE TOOLS RECOVERY ').classes('text-5xl font-extrabold mb-4 text-gray-900')
@@ -21,13 +21,13 @@ with ui.row().style('background: linear-gradient(to bottom, #B7E7FE, #ffffff); p
 
     # Create a container for the 3D rotating effect
     # Link the external CSS file
-    ui.add_css('./static/app.css')
+    ui.add_css('./public/static/app.css')
     # Assuming app.css is correctly linked in your project, with 3D rotation styles.
     with ui.element('div').classes('card-container'):
         with ui.element('div').classes('card-carousel'):
             for i in range(5):
                 with ui.element('div').classes('card').style('--position: {}; --quantity: 5;'.format(i + 1)):
-                    ui.image(f'./image/card-{i+1}.jpg').style('width: 100%; height: 100%; object-fit: cover; border-radius: 10px;')
+                    ui.image(f'./public/image/card-{i+1}.jpg').style('width: 100%; height: 100%; object-fit: cover; border-radius: 10px;')
 
 
 
@@ -89,7 +89,7 @@ with ui.row().classes('justify-around flex-wrap gap-6'):
     # HDD Recovery Card
     # Card with image hover effect for pop-out
     with ui.card().classes('shadow-xl rounded-xl overflow-hidden max-w-xs relative hover:scale-105 transition-transform duration-300').style('background: #1d3557; color: white;'):
-        ui.image('./image/hdd.jpg').classes('w-full transition-transform duration-300 transform hover:scale-110')
+        ui.image('./public/image/hdd.jpg').classes('w-full transition-transform duration-300 transform hover:scale-110')
         ui.label('HDD/SSD Recovery').classes('text-xl font-semibold mt-2 mb-2 text-center')
         ui.label('Advanced HDD data recovery software to rescue lost or corrupted data.').classes('text-sm mb-4 px-4')
         ui.button('Buy Now', on_click=lambda: ui.notify('Redirecting to HDD Recovery purchase page')).classes('bg-yellow-500 text-white mx-4 mb-4')
@@ -97,34 +97,34 @@ with ui.row().classes('justify-around flex-wrap gap-6'):
 
     # VIRTUAL DISK Recovery Card
     with ui.card().classes('shadow-xl rounded-xl overflow-hidden max-w-xs relative hover:scale-105 transition-transform duration-300').style('background: #e63946; color: white;'):
-        ui.image('./image/virtual.jpg').classes('w-full transition-transform duration-300 transform hover:scale-110')
+        ui.image('./public/image/virtual.jpg').classes('w-full transition-transform duration-300 transform hover:scale-110')
         ui.label('VIRTUAL DISK Recovery').classes('text-xl font-semibold mt-2 mb-2 text-center')
         ui.label('Reliable VIRTUAL DISK recovery software to retrieve important data.').classes('text-sm mb-4 px-4')
         ui.button('Buy Now', on_click=lambda: ui.notify('Redirecting to virtual disk  Recovery purchase page')).classes('bg-yellow-500 text-white mx-4 mb-4')
 
     # RAID Recovery Card
     with ui.card().classes('shadow-xl rounded-xl overflow-hidden max-w-xs relative hover:scale-105 transition-transform duration-300').style('background: #2a9d8f; color: white;'):
-        ui.image('./image/raid.jpg').classes('w-full transition-transform duration-300 transform hover:scale-110')
+        ui.image('./public/image/raid.jpg').classes('w-full transition-transform duration-300 transform hover:scale-110')
         ui.label('RAID Recovery').classes('text-xl font-semibold mt-2 mb-2 text-center')
         ui.label('Comprehensive RAID recovery solutions for data recovery.').classes('text-sm mb-4 px-4')
         ui.button('Buy Now', on_click=lambda: ui.notify('Redirecting to RAID Recovery purchase page')).classes('bg-yellow-500 text-white mx-4 mb-4')
 
     # EWF Recovery Card
     with ui.card().classes('shadow-xl rounded-xl overflow-hidden max-w-xs relative hover:scale-105 transition-transform duration-300').style('background: #6a0572; color: white;'):
-        ui.image('./image/ewf.jpg').classes('w-full transition-transform duration-300 transform hover:scale-110')
+        ui.image('./public/image/ewf.jpg').classes('w-full transition-transform duration-300 transform hover:scale-110')
         ui.label('EWF Recovery').classes('text-xl font-semibold mt-2 mb-2 text-center')
         ui.label('Specialized software to recover files from EWF formats.').classes('text-sm mb-4 px-4')
         ui.button('Buy Now', on_click=lambda: ui.notify('Redirecting to EWF Recovery purchase page')).classes('bg-yellow-500 text-white mx-4 mb-4')
 
     # HDD IMAGE Card
     with ui.card().classes('shadow-xl rounded-xl overflow-hidden max-w-xs relative hover:scale-105 transition-transform duration-300').style('background: #6a0327; color: white;'):
-        ui.image('./image/imagedisk.jpg').classes('w-full transition-transform duration-300 transform hover:scale-110')
+        ui.image('./public/image/imagedisk.jpg').classes('w-full transition-transform duration-300 transform hover:scale-110')
         ui.label('DISK IMAGE Recovery').classes('text-xl font-semibold mt-2 mb-2 text-center')
         ui.label('Specialized software to recover files disk images.').classes('text-sm mb-4 px-4')
         ui.button('Buy Now', on_click=lambda: ui.notify('Redirecting to EWF Recovery purchase page')).classes('bg-yellow-500 text-white mx-4 mb-4')
     
     with ui.card().classes('shadow-xl rounded-xl overflow-hidden max-w-xs relative hover:scale-105 transition-transform duration-300').style('background: #6a0580; color: white;'):
-        ui.image('./image/combined.jpg').classes('w-full transition-transform duration-300 transform hover:scale-110')
+        ui.image('./public/image/combined.jpg').classes('w-full transition-transform duration-300 transform hover:scale-110')
         ui.label('All in one Recovery').classes('text-xl font-semibold mt-2 mb-2 text-center')
         ui.label('Specialized combined software to recover data from various disk and file formats .').classes('text-sm mb-4 px-4')
         ui.button('Buy Now', on_click=lambda: ui.notify('Redirecting to EWF Recovery purchase page')).classes('bg-yellow-500 text-white mx-4 mb-4')
